@@ -20,10 +20,11 @@ app.get("/circle/:username", (req, res) => {
 
   createImage(username)
     .then(e => {
-      res.render('pages/circle');
+      setTimeout(() => (res.render('pages/circle'), 1))
     })
 });
 
+var PORT = process.env.PORT || 3000;
 app.listen(3001, () => {
-  console.log(`Server listening on 3001`);
+  console.log(`Server listening on ${PORT}`);
 });
