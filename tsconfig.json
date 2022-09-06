@@ -5,7 +5,7 @@
 
     "strict": true,
     "outDir": "dist",
-    "watch": true,
+    "watch": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
