@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <%- include('../partials/head'); %>
-</head>
-<body class="container">
+<html lang="en" class="text-bg-dark">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
 
-<header>
-  <%- include('../partials/header'); %>
-</header>
+  <script>
+   function getUname() {
+     var name = document.getElementById("username-field").value;
+     console.log(name);
+     event.preventDefault();
+     window.location.replace(`/circle/${name}`)
+   }
+  </script>
 
-<main>
-  <div class="jumbotron">
-    <p>Create your own Farcaster interaction circle.</p>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">@</span>
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-    </div>
-  </div>
-</main>
+  <body class="container text-bg-dark">
 
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
+    <header class="text-bg-dark">
+      <%- include('../partials/header'); %>
+    </header>
 
-</body>
+    <main class="text-bg-dark">
+      <div class="align-middle">
+        <h1 class="text-center">Friendcaster</h1>
+        <p class="text-center">Create your own Farcaster interaction circle.</p>
+
+        <form>
+          <div class="vstack gap-2 col-md-5 mx-auto w-25 pt-5">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">@</span>
+              <input onsubmit='getUname()' id="username-field" type="text" class="form-control" placeholder="yashkarthik" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" onsubmit="getUname()" onclick="getUname()" class="btn text-white btn-primary">Generate</button>
+          </div>
+        </form>
+
+        <div class="vstack pt-5">
+          <p class="text-center text-muted">Do not enter any password or seed phrase.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="text-bg-dark">
+      <%- include('../partials/footer'); %>
+    </footer>
+
+  </body>
 </html>

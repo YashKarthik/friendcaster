@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <%- include('../partials/head'); %>
-</head>
-<body class="container">
+<html lang="en" class="text-bg-dark">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container text-bg-dark">
 
-<header>
-  <%- include('../partials/header'); %>
-</header>
+    <header class="text-bg-dark">
+      <%- include('../partials/header'); %>
+    </header>
 
-<main>
-<div class="row">
-  <div class="col-sm-8">
-    <div class="jumbotron">
-      <h1>This is great</h1>
-      <p>Welcome to templating using EJS</p>
-    </div>
-  </div>
+    <main class="text-bg-dark">
+      <div class="d-flex flex-col align-items-center">
+        <h1 class="text-center">Frequently Asked Questions</h1>
 
-  <div class="col-sm-4">
-    <div class="well">
-      <h3>Look I'm A Sidebar!</h3>
-    </div>
-  </div>
-</div>
-</main>
+        <div class="vstack pt-5 justify-middle ">
+          <h4>What is Friendcaster?</h4>
+          <p class="text-secondary">Friendcaster generates an image that displays the users you interact with the most on Twitter.</p>
 
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
+          <h4>Where does the data come from?</h4>
+          <p class="text-secondary">Friendcaster uses publically available data on the Farcaster smart contract (name registry) and every user's host directory.</p>
 
-</body>
+          <h4>What counts as an interaction?</h4>
+          <p class="text-secondary">
+            Currently only casts replies are considered as interactions, I'm actively working to include likes, recasts, and watching in the calculations.
+          </p>
+
+          <h4>Do I need to login to my Farcaster account to use Friendcaster?</h4>
+          <p class="text-warning">
+            No, you do NOT need to login to your Farcaster account or give any permissions to use Friendcaster.
+            Friendcascter only uses publicly available data.
+          </p>
+
+          <h4>Is this open source?</h4>
+          <p>
+            Yes!! Contributions are welcome!!
+            <a target="_blank" href="https://github.com/yashkarthik/friendcaster">Github</a>
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <%- include('../partials/footer'); %>
+    </footer>
+
+  </body>
 </html>

@@ -11,14 +11,17 @@ app.get("/", (req, res) => {
   res.render('pages/index');
 })
 
+app.get("/faq", (req, res) => {
+  res.render('pages/faq');
+})
+
 app.get("/circle/:username", (req, res) => {
   let username = req.params.username;
-  res.render('pages/circle');
 
-  //createImage(username)
-  //  .then(e => {
-  //    res.render('pages/circle');
-  //  })
+  createImage(username)
+    .then(e => {
+      res.render('pages/circle');
+    })
 });
 
 app.listen(3001, () => {
