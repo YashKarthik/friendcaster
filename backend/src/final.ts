@@ -1,4 +1,3 @@
-
 import { providers, Contract } from 'ethers';
 import * as dotenv from 'dotenv';
 dotenv.config()
@@ -25,14 +24,14 @@ const REGISTRY_ABI = [
 ]
 
 
-async function main() {
+export async function createImage(username: string) {
   const provider = new providers.AlchemyProvider('rinkeby', process.env.ALCHEMY_API_KEY);
   const registryContract = new Contract(REGISTRY_CONTRACT_ADDRESS, REGISTRY_ABI, provider);
 
   const block = await provider.getBlockNumber();
   console.log("Block: ", block);
 
-  const data = await getInteractionFrequency('yashkarthik', registryContract)
+  const data = await getInteractionFrequency(username, registryContract)
   console.log(data)
 
   await render([
@@ -42,5 +41,3 @@ async function main() {
 	  {distance: 500, count: 26,  radius: 30,     users: data[3]},
   ]);
 };
-
-main();

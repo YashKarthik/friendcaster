@@ -53,7 +53,8 @@ export const render = async (config: IConfig[]) => {
       const defaultAvatarUrl = "https://www.farcaster.xyz/img/logo_48.png";
       const avatarUrl = users[i].avatarUrl || defaultAvatarUrl;
 
-      const img = await loadImage(avatarUrl);
+      const img = await loadImage(avatarUrl)
+        .catch(e => loadImage(defaultAvatarUrl))
       ctx.drawImage(
         img,
         centerX - radius,
@@ -66,8 +67,8 @@ export const render = async (config: IConfig[]) => {
     }
   }
 
-  const out = fs.createWriteStream("./circle.png");
+  const out = fs.createWriteStream("./public/circle.png");
   const stream = canvas.createPNGStream();
   stream.pipe(out);
-  out.on("finish", () => console.log("Done!"))
+  out.on("finish", () => console.log("Done!\n----------"))
 };

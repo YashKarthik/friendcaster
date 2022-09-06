@@ -18,7 +18,7 @@ export const getDirectory = async (username: string, registryContract:any): Prom
   const byte32Name = utils.formatBytes32String(username);
   const directoryUrl = await registryContract.getDirectoryUrl(byte32Name);
 
-  const directoryResponse = await got(directoryUrl);
+  const directoryResponse = await got(directoryUrl, { protocol: 'https:' });
   const directoryBody = JSON.parse(directoryResponse.body).body;
 
   return {
