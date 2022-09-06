@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.render('pages/index');
 })
 
-app.get("/faq", (req, res) => {
+app.get("/faq", (_req, res) => {
   res.render('pages/faq');
 })
 
