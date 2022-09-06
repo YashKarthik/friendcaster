@@ -32,8 +32,6 @@ export async function createImage(username: string) {
   console.log("Block: ", block);
 
   const data = await getInteractionFrequency(username, registryContract)
-  console.log(data)
-
   await render([
     {distance: 0,   count: 1,   radius: 110,    users: data[0]},
 	  {distance: 300, count: 8,   radius: 80,     users: data[1]},
