@@ -11,6 +11,9 @@ Friendcaster generates an image that shows you the users you interact with most 
 - I'm actively working to include other stuff (likes, recasts etc)
 
 # v2
+
+v2 is getting built [here](https://github.com/YashKarthik/frencaster-v2)
+
 - [ ] Consider other interactions in the calculation.
 - [ ] Build a full-fledged frontend in React (maybe use Next.js). And offload image rendering here.
 - [ ] Use an outward spiral instead of multiple levels of circles.
