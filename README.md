@@ -2,6 +2,8 @@
 
 Create your own [Farcaster](https://farcaster.xyz) interaction circle. *Inspired by [Chirpty](https://chirpty.com/)*
 
+**This project pulled data from the Rinkeby Testnet, which is now deprecated. Development is being done on [v2](https://github.com/YashKarthik/frencaster-v2), to work with the new Farcaster contracts on Goerli**
+
 <img src="https://github.com/YashKarthik/friendcaster/blob/master/public/circle.png" width="500" />
 
 Friendcaster generates an image that shows you the users you interact with most on Farcaster.
